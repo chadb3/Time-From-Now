@@ -3,13 +3,25 @@
 <script>
 	var a = new Date();
 </script>
+
 <link rel="icon" href="images/favicon_1.svg">
 <h1 id="Display_Name">Time From Now</h1>
 <div id="txt_current_time">Current Time:</div>
 <div id="current_time"></div>
+<br>
+<label for="time-select" ">Choose a time:</label>
+<select name="times" id="time-selector">
+	<option value="15" onclick="updateTimeText()">15 minutes</option>
+	<option value="30" onclick="updateTimeText()" selected>30 minutes</option>
+	<option value="60" onclick="updateTimeText()">1 hour</option>
+</select>
+<br>
+<br>
 <div id="txt_future_time">Time in {}:</div>
 <div id="future_time"></div>
+
 <script>
+	const minutes = [15,30,60];
 	var dateTimeString = a.toLocaleString();
 	const tl=dateTimeString.split(',');
 	//tl[0] = date (9/29/2024) for example
@@ -21,5 +33,12 @@
 	const tl2=dateTimeString2.split(',');
 	document.getElementById("future_time").innerHTML=tl2[1];
 	//setinterval(func(),1000)//1000 is in ms
+	console.log(minutes[document.getElementById("time-selector").selectedIndex]);
+	document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+	function updateTimeText()
+	{
+		document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+	}
 </script>
+
 </HTML>
