@@ -10,7 +10,7 @@
 <div id="current_time"></div>
 <br>
 <label for="time-select" ">Choose a time:</label>
-<select name="times" id="time-selector">
+<select name="times" id="time-selector" autocomplete="off">
 	<option value="15" onclick="updateTimeTextAndTime()">15 minutes</option>
 	<option value="30" onclick="updateTimeTextAndTime()" selected>30 minutes</option>
 	<option value="60" onclick="updateTimeTextAndTime()">1 hour</option>
@@ -24,6 +24,7 @@
 	const minutes = [15,30,60];
 	var dateTimeString = a.toLocaleString();
 	const tl=dateTimeString.split(',');
+	console.log(tl);
 	//tl[0] = date (9/29/2024) for example
 	//tl[1] = time
 	//document.getElementById("current_time").innerHTML=a.toLocaleString();
@@ -37,12 +38,24 @@
 	document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
 	function updateTimeTextAndTime()
 	{
-		document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+		const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
+		document.getElementById("txt_future_time").innerHTML="Time in " + minutes[selectedTimeIndex]+ " minutes:";
 		c = new Date(a.getTime()+minutes[document.getElementById("time-selector").selectedIndex]*60*1000);
 		var dateTimeString2=c.toLocaleString();
 		const tl2=dateTimeString2.split(',');
 		document.getElementById("future_time").innerHTML=tl2[1];
 	}
+</script>
+<script id="functions_to_update_every_min">
+	function updateTimes()
+	{
+		var a = new Date();
+		var dateTimeString = a.toLocaleString();
+		const tl=dateTimeString.split(',');
+		document.getElementById("current_time").innerHTML=tl[1];
+	}
+	setInterval(updateTimes,1000)
+	//maybe do the above but don't display seconds
 </script>
 
 </HTML>
