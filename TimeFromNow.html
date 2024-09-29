@@ -11,9 +11,9 @@
 <br>
 <label for="time-select" ">Choose a time:</label>
 <select name="times" id="time-selector">
-	<option value="15" onclick="updateTimeText()">15 minutes</option>
-	<option value="30" onclick="updateTimeText()" selected>30 minutes</option>
-	<option value="60" onclick="updateTimeText()">1 hour</option>
+	<option value="15" onclick="updateTimeTextAndTime()">15 minutes</option>
+	<option value="30" onclick="updateTimeTextAndTime()" selected>30 minutes</option>
+	<option value="60" onclick="updateTimeTextAndTime()">1 hour</option>
 </select>
 <br>
 <br>
@@ -35,9 +35,13 @@
 	//setinterval(func(),1000)//1000 is in ms
 	console.log(minutes[document.getElementById("time-selector").selectedIndex]);
 	document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
-	function updateTimeText()
+	function updateTimeTextAndTime()
 	{
 		document.getElementById("txt_future_time").innerHTML="Time in " + minutes[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+		c = new Date(a.getTime()+minutes[document.getElementById("time-selector").selectedIndex]*60*1000);
+		var dateTimeString2=c.toLocaleString();
+		const tl2=dateTimeString2.split(',');
+		document.getElementById("future_time").innerHTML=tl2[1];
 	}
 </script>
 
