@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<title>Display Time from Now</title>
+<script>
+	var a = new Date();
+</script>
+<link rel="icon" href="images/favicon_1.svg">
+<h1 id="Display_Name">Time From Now</h1>
+<div id="txt_current_time">Current Time:</div>
+<div id="current_time"></div>
+<div id="txt_future_time">Time in {}:</div>
+<div id="future_time"></div>
+<script>
+	var dateTimeString = a.toLocaleString();
+	const tl=dateTimeString.split(',');
+	//tl[0] = date (9/29/2024) for example
+	//tl[1] = time
+	//document.getElementById("current_time").innerHTML=a.toLocaleString();
+	document.getElementById("current_time").innerHTML=tl[1];
+	var c = new Date(a.getTime()+30*60*1000);
+	var dateTimeString2=c.toLocaleString();
+	const tl2=dateTimeString2.split(',');
+	document.getElementById("future_time").innerHTML=tl2[1];
+</script>
+</HTML>
