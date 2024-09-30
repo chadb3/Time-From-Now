@@ -28,8 +28,8 @@ function updateChosenTime()
     var timeNow=new Date();
     const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
     //console.log("selectedTimeIndex: "+selectedTimeIndex);
-    document.getElementById("txt_future_time").innerHTML="Time in " + minutes[selectedTimeIndex]+ " minutes:";
-    var futureTime = new Date(timeNow.getTime()+minutes[document.getElementById("time-selector").selectedIndex]*60*1000).toLocaleString().split(",")[1];
+    document.getElementById("txt_future_time").innerHTML="Time in " + minutes_array[selectedTimeIndex]+ " minutes:";
+    var futureTime = new Date(timeNow.getTime()+minutes_array[document.getElementById("time-selector").selectedIndex]*60*1000).toLocaleString().split(",")[1];
     document.getElementById("future_time").innerHTML=futureTime;
 }
 setInterval(updateChosenTime,1000);
@@ -39,4 +39,4 @@ function progressClock()
     var currentTimeString=timeNow.toLocaleString().split(",")[1];
     document.getElementById("current_time").innerHTML=currentTimeString;
 }
-setInterval(progressClock,500);
+setInterval(progressClock,1000);
