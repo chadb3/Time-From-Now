@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
   <defs/>
   <ellipse style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0);" cx="250" cy="250" rx="250" ry="250"/>
+  <text style="white-space: pre; fill: rgb(51, 51, 51); font-family: Arial, sans-serif; font-size: 28px;" x="208.931" y="480.449">30 min
+
+</text>
+  <path d="M 255.627 248.561 H 397.561 L 397.561 233.561 L 437.561 253.561 L 397.561 273.561 L 397.561 258.561 H 255.627 V 248.561 Z" style="stroke: rgb(0, 0, 0); fill: rgb(239, 25, 25);" transform="matrix(-0.015746, 0.999876, -0.999876, -0.015746, 513.180908, 1.958145)" bx:shape="arrow 255.627 233.561 181.934 40 10 40 0 1@e6a7afe2"/>
+  <path d="M 251.33 248.246 H 421.888 L 421.888 233.246 L 461.888 253.246 L 421.888 273.246 L 421.888 258.246 H 251.33 V 248.246 Z" style="stroke: rgb(0, 0, 0); fill: rgb(255, 5, 5);" bx:shape="arrow 251.33 233.246 210.559 40 10 40 0 1@a89b6de0"/>
+  <path d="M 257.502 248.246 H 459.456 L 459.456 233.246 L 499.456 253.246 L 459.456 273.246 L 459.456 258.246 H 257.502 V 248.246 Z" style="stroke: rgb(0, 0, 0);" transform="matrix(0.012405, -0.999923, 0.999923, 0.012405, 1.081482, 507.586884)" bx:shape="arrow 257.502 233.246 241.954 40 10 40 0 1@b9d7da74"/>
 </svg>

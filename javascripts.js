@@ -29,7 +29,7 @@ function updateChosenTime()
     const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
     //console.log("selectedTimeIndex: "+selectedTimeIndex);
     document.getElementById("txt_future_time").innerHTML="Time in " + minutes_array[selectedTimeIndex]+ " minutes:";
-    var futureTime = new Date(timeNow.getTime()+minutes_array[document.getElementById("time-selector").selectedIndex]*60*1000).toLocaleString().split(",")[1];
+    var futureTime = new Date(timeNow.getTime()+minutes_array[selectedTimeIndex]*60*1000).toLocaleString().split(",")[1];
     document.getElementById("future_time").innerHTML=futureTime;
 }
 setInterval(updateChosenTime,1000);
@@ -40,3 +40,21 @@ function progressClock()
     document.getElementById("current_time").innerHTML=currentTimeString;
 }
 setInterval(progressClock,1000);
+
+function saveTime()
+{
+    var timeNow=new Date();
+    var currentTimeString=timeNow.toLocaleString().split(",")[1];
+    const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
+    var futureTime = new Date(timeNow.getTime()+minutes_array[selectedTimeIndex]*60*1000).toLocaleString().split(",")[1];
+    console.log("timeNow:"+currentTimeString);
+    console.log("futureTime: "+futureTime);
+    var timeSnapShotStringLog = "Time of snapshot: "+currentTimeString+" \nTime in "+minutes_array[selectedTimeIndex]+" minutes: "+futureTime;
+
+    var timeSnapShotString = "<br>Time of snapshot: "+currentTimeString+" \n<br>Time in "+minutes_array[selectedTimeIndex]+" minutes: "+futureTime;
+    console.log(timeSnapShotStringLog);
+    document.getElementById("time_snapshot").innerHTML=timeSnapShotString;
+}
+
+    
+    
