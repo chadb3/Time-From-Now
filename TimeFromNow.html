@@ -10,12 +10,16 @@
 <div id="txt_current_time">Current Time:</div>
 <div id="current_time"></div>
 <br>
-<label for="time-select" ">Choose a time:</label>
+
+<div class="time_selector" for="time-select">
+<label class="time_selector" for="time-select">Choose a time:</label>
 <select name="times" id="time-selector" autocomplete="off">
 	<option value="15" onclick="updateChosenTime()">15 minutes</option>
 	<option value="30" onclick="updateChosenTime()" selected>30 minutes</option>
 	<option value="60" onclick="updateChosenTime()">1 hour</option>
 </select>
+</div>
+
 <br>
 <br>
 <div id="txt_future_time">Time in {}:</div>

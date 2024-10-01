@@ -1,9 +1,36 @@
-h1 {font-size:100%;color: 
+h1 {font-size:150%;color: 
     red;}
 #Display_Name{
     background-color: #efefef;
     border: 4px;
     margin: 25px auto 30px auto;
     text-align: center;
-
+    text-shadow: -0.5px -0.25px #b32929;
+}
+#txt_current_time,#txt_future_time{
+    background-color: orange;
+    margin: 25px 25px 1px 25px;
+    text-align: center;
+    font-size:125%;
+    padding:5px;
+}
+#current_time,#future_time{
+    text-align:center;
+    font-size:150%;
+    background-color: rgb(190, 187, 187);
+    margin: 2px 25px 2px 25px;
+    padding:25px;
+}
+.time_selector{
+    text-align:left;
+    font-size:130%;
+    background-color: lightsteelblue;
+    margin:1px 25px -40px 25px;
+    padding: 2px;
+}
+#time-selector{
+    font-size:145%;
+    background-color: whitesmoke;
+    float: center;
+    margin-left:-25px;
 }
