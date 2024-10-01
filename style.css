@@ -33,6 +33,7 @@ h1 {font-size:150%;color:
     background-color: whitesmoke;
     float: center;
     margin-left:-25px;
+    cursor: pointer;
 }
 #button_container_div{
     text-align: center;
@@ -45,6 +46,7 @@ h1 {font-size:150%;color:
     font-size:150%;
     padding:15px;
     box-shadow: 1px 0px 4px 2px black;
+    cursor:pointer;
 }
 #time_snapshot{
     background-color: azure;
