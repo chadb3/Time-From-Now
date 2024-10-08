@@ -22,7 +22,7 @@ h1 {font-size:150%;color:
     padding:25px;
 }
 .time_selector{
-    text-align:left;
+    text-align:center;
     font-size:130%;
     background-color: lightsteelblue;
     margin:-20px 25px -37px 25px;
@@ -53,7 +53,7 @@ h1 {font-size:150%;color:
     padding: 30px;
 }
 #time_snapshot_container{
-    text-align:left;
+    text-align:center;
     margin: 25px;
     border-style: dashed;
 }
