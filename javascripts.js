@@ -12,7 +12,9 @@ const initialTimeString=currentDateTimeString.split(",")[1];
 console.log("js: "+currentDateTimeString);
 function initialize_times()
 {
-    document.getElementById("txt_future_time").innerHTML="Time in " + minutes_array[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+    const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
+    //document.getElementById("txt_future_time").innerHTML="Time in " + minutes_array[document.getElementById("time-selector").selectedIndex]+ " minutes:";
+    document.getElementById("txt_future_time").innerHTML="Time in " + "<div id=\"red_text_time\">"+minutes_array[selectedTimeIndex]+"</div>"+ " minutes:";
 
     document.getElementById("current_time").innerHTML=initialTimeString;
     var futureDateTime=new Date(currentDateTime.getTime()+30*60*1000);
@@ -28,7 +30,7 @@ function updateChosenTime()
     var timeNow=new Date();
     const selectedTimeIndex=document.getElementById("time-selector").selectedIndex;
     //console.log("selectedTimeIndex: "+selectedTimeIndex);
-    document.getElementById("txt_future_time").innerHTML="Time in " + minutes_array[selectedTimeIndex]+ " minutes:";
+    document.getElementById("txt_future_time").innerHTML="Time in " + "<div id=\"red_text_time\">"+minutes_array[selectedTimeIndex]+"</div>"+ " minutes:";
     var futureTime = new Date(timeNow.getTime()+minutes_array[selectedTimeIndex]*60*1000).toLocaleString().split(",")[1];
     document.getElementById("future_time").innerHTML=futureTime;
 }

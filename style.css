@@ -63,3 +63,7 @@ h1 {font-size:150%;color:
 /*html{
     background-color: springgreen;
 }*/
+#red_text_time{
+    display:inline-block;
+    color:red;
+}
