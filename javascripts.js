@@ -61,7 +61,7 @@ function saveTime()
     var timeSnapShotStringLog = "Time of snapshot: "+currentTimeString+" \nTime in "+minutes_array[selectedTimeIndex]+" minutes: "+newTimeStrint;
 
     //var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <strong>"+minutes_array[selectedTimeIndex]+"</strong> minutes: "+futureTime;
-    var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <strong>"+minutes_array[selectedTimeIndex]+"</strong> minutes: "+newTimeStrint;
+    var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <div id=\"red_text_time\"><strong>"+minutes_array[selectedTimeIndex]+"</strong></div> minutes: "+newTimeStrint;
     console.log(timeSnapShotStringLog);
     document.getElementById("time_snapshot").innerHTML=timeSnapShotString;
 }
