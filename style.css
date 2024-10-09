@@ -25,8 +25,9 @@ h1 {font-size:150%;color:
     text-align:center;
     font-size:130%;
     background-color: lightsteelblue;
-    margin:-20px 25px -37px 25px;
+    margin:-12px 25px -30px 25px;
     padding: 24px;
+    //border-style: dashed;
 }
 #time-selector{
     font-size:145%;
