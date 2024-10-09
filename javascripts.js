@@ -51,9 +51,17 @@ function saveTime()
     var futureTime = new Date(timeNow.getTime()+minutes_array[selectedTimeIndex]*60*1000).toLocaleString().split(",")[1];
     console.log("timeNow:"+currentTimeString);
     console.log("futureTime: "+futureTime);
-    var timeSnapShotStringLog = "Time of snapshot: "+currentTimeString+" \nTime in "+minutes_array[selectedTimeIndex]+" minutes: "+futureTime;
+    splt_time=futureTime.split(":");
+    console.log(splt_time);
+    AmPm=splt_time[2].split(" ")[1];
+    console.log(AmPm);
+    newTimeStrint=splt_time[0]+":"+splt_time[1]+" "+AmPm;
+    console.log(newTimeStrint);
+    //var timeSnapShotStringLog = "Time of snapshot: "+currentTimeString+" \nTime in "+minutes_array[selectedTimeIndex]+" minutes: "+futureTime;
+    var timeSnapShotStringLog = "Time of snapshot: "+currentTimeString+" \nTime in "+minutes_array[selectedTimeIndex]+" minutes: "+newTimeStrint;
 
-    var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <strong>"+minutes_array[selectedTimeIndex]+"</strong> minutes: "+futureTime;
+    //var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <strong>"+minutes_array[selectedTimeIndex]+"</strong> minutes: "+futureTime;
+    var timeSnapShotString = "<br>Time of <em><u>snapshot</u></em>: "+currentTimeString+" \n<br>Time in <strong>"+minutes_array[selectedTimeIndex]+"</strong> minutes: "+newTimeStrint;
     console.log(timeSnapShotStringLog);
     document.getElementById("time_snapshot").innerHTML=timeSnapShotString;
 }
